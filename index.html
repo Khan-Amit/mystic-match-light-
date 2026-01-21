@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mystic Match - Numerology Fun</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- PWA Manifest (we'll create later) -->
+    <meta name="theme-color" content="#5D3FD3">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1><i class="fas fa-eye"></i> Mystic Match</h1>
+            <p class="tagline">Chinese Numerology Fun</p>
+        </header>
+
+        <!-- Main App Area -->
+        <main>
+            <!-- Daily Forecast Card -->
+            <div class="card-container" id="dailyCard">
+                <div class="mystic-card">
+                    <div class="card-header">
+                        <i class="fas fa-calendar-day"></i>
+                        <span class="card-category">Daily Forecast</span>
+                    </div>
+                    <div class="card-content">
+                        <div class="number-display">
+                            <div class="number-circle" id="dailyNumber">5</div>
+                            <div class="element-badge" id="dailyElement">Earth</div>
+                        </div>
+                        <p id="dailyForecastText">Loading your cosmic forecast...</p>
+                    </div>
+                    <div class="card-footer">
+                        <div class="forecast-date" id="currentDate">Today, January 15</div>
+                        <button class="action-btn" id="refreshDailyBtn" title="Refresh">
+                            <i class="fas fa-redo"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Controls -->
+            <div class="controls">
+                <button class="btn-primary" id="calculateNumberBtn">
+                    <i class="fas fa-calculator"></i> Calculate My Number
+                </button>
+                <button class="btn-secondary" id="matchBtn">
+                    <i class="fas fa-heart"></i> Check Hypothetical Match
+                </button>
+            </div>
+
+            <!-- Quick Stats -->
+            <div class="stats">
+                <div class="stat">
+                    <i class="fas fa-magic"></i>
+                    <span>Forecasts: <span id="forecastCount">0</span></span>
+                </div>
+                <div class="stat">
+                    <i class="fas fa-users"></i>
+                    <span>Matches: <span id="matchCount">0</span></span>
+                </div>
+                <div class="stat">
+                    <i class="fas fa-bolt"></i>
+                    <span>Energy: <span id="energyLevel">High</span></span>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <p>Made with <i class="fas fa-eye" style="color: #5D3FD3;"></i> by Shiva Netra</p>
+            <p class="footer-links">
+                <a href="#" id="shareAppBtn"><i class="fas fa-share-alt"></i> Share</a> | 
+                <a href="#" id="aboutBtn"><i class="fas fa-info-circle"></i> About</a> | 
+                <a href="#" id="resetBtn"><i class="fas fa-redo"></i> Reset</a>
+            </p>
+        </footer>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast"></div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+                  </html>
